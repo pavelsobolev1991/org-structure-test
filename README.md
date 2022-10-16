@@ -4,9 +4,9 @@
 
 <div id="skills" align="left">
 <p>Необходимо реализовать на React вывод в интерфейс дерева</p>
-<img src="https://i.ibb.co/WvLy6y5/task1.png" height="500"/>
+<img src="https://i.ibb.co/WvLy6y5/task1.png" height="200"/>
 <p>Реализовать перемещение мышкой одних подразделений в другие с изменением оригинального массива orgStructure. При обновлении страницы изменения должны сохраняться.</p>
-<img src="https://i.ibb.co/Pmf6g2m/task2.png" height="500"/>
+<img src="https://i.ibb.co/Pmf6g2m/task2.png" height="200"/>
 </div>
 
 <div id="skills" align="left">
