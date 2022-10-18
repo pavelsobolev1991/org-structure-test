@@ -1,7 +1,7 @@
-import {useState} from "react";
-import {  NodeArr } from "../models"
+import { useState } from "react";
+import { NodeArr } from "../models";
 
-export function useLocalStorage(key:string, initialValue:NodeArr) {
+export function useLocalStorage(key: string, initialValue: NodeArr) {
   // состояние для хранения значения
   // передаем функцию инициализации useState для однократного выполнения
   const [storedValue, setStoredValue] = useState(() => {
@@ -17,22 +17,24 @@ export function useLocalStorage(key:string, initialValue:NodeArr) {
     }
   });
 
-// возвращаем обернутую версию сеттера useState,
-// которая помещает новое значение в локальное хранилище
-const setValue = (value:any) => {
-  try {
-    // значение может быть функцией
-    const valueToStore =
-      value instanceof Function ? value(storedValue) : value;
-    // сохраняем состояние
-    setStoredValue(valueToStore);
-    // помещаем его в локальное хранилище
-    window.localStorage.setItem(key, JSON.stringify(valueToStore));
-  } catch (error) {
-    // более продвинутая реализация может предполагать обработку ошибок в зависимости от вида ошибки
-    console.error(error);
-  }
-};
+  // возвращаем обернутую версию сеттера useState,
+  // которая помещает новое значение в локальное хранилище
+  const setValue = (value: any) => {
+    try {
+      // значение может быть функцией
+      const valueToStore =
+        value instanceof Function ? value(storedValue) : value;
+      // сохраняем состояние
+      setStoredValue(valueToStore);
+      // помещаем его в локальное хранилище
+      window.localStorage.setItem(key, JSON.stringify(valueToStore));
+    } catch (error) {
+      // более продвинутая реализация может предполагать обработку ошибок в зависимости от вида ошибки
+      console.error(error);
+    }
+  };
+  // console.log('test',clearStorage)
+  // clearStorage && clearStorage(storedValue) 
 
-return [storedValue, setValue];
+  return [storedValue, setValue];
 }

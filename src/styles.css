@@ -14,9 +14,48 @@ body {
   width: 1000px;
   margin: 50px auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 100px;
+  padding: 50px;
+  grid-gap: 50px;
+}
+
+.btn_clear {
+  margin: 100px;
+  display: inline-block;	
+	box-sizing: border-box;
+	padding: 0 25px;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: 1px solid #fff;
+	border-radius: 50px;
+	height: 46px;
+	line-height: 46px;
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+	background-color: rgb(255, 104, 104);
+	box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;  
+	vertical-align: top;
+	transition: box-shadow 0.2s;
+}
+
+.btn_clear:focus-visible {
+	border: 1px solid #4c51f9;
+	outline: none;
+}
+.btn_clear:hover {
+	transition: all 0.2s;
+	box-shadow: 0 7px 14px rgb(65 132 144 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
+}
+.btn_clear:active {
+	background-color: #808080;
 }
 
 .org-tree ul {
